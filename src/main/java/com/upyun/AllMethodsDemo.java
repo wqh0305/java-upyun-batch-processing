@@ -6,7 +6,7 @@ import com.upyun.utils.FileList;
 import java.io.IOException;
 import java.util.*;
 
-public class ListFilesInfo {
+public class AllMethodsDemo {
     public static void main(String[] args) throws IOException, UpException {
         RestManager manager = new RestManager("服务名", "操作员", "操作员密码");
         String dirUri = "/"; //目录路径
