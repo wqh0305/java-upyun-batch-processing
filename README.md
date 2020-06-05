@@ -1,8 +1,9 @@
-# upyun_-batch-processing
+# java-upyun-batch-processing
 
 - 版本：1.8
 - 使用upyun sdk 做的一些批量处理
-- 需要导包
+
+#### Maven 安装
 
 ````
 <dependency>
