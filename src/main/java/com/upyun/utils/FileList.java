@@ -8,6 +8,9 @@ import okhttp3.Response;
 import java.io.IOException;
 import java.util.*;
 
+/***
+ * 基于这个类来实现多个批量处理操作
+ */
 public class FileList {
 
     public static TotalFile getList(String dirUri, RestManager manager) throws IOException, UpException {

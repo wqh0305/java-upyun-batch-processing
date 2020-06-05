@@ -2,15 +2,23 @@ package com.upyun;
 
 import com.upyun.pojo.TotalFile;
 import com.upyun.utils.FileList;
+import com.upyun.utils.MFCopy;
+import okhttp3.Response;
 
 import java.io.IOException;
 import java.util.*;
 
 public class AllMethodsDemo {
-    public static void main(String[] args) throws IOException, UpException {
+    public static void main(String[] args) throws Exception {
         RestManager manager = new RestManager("服务名", "操作员", "操作员密码");
         String dirUri = "/"; //目录路径
+        String uri = "/";  //目标路径    /<save_as_dir>
+        String source = "/"; //源文件  /<source_to_dir>
 
+//        toGetFilesList(dirUri,manager); //统计目录下的文件和目录
+//        deleteFiles(dirUri,manager); //删除目录下的文件
+//        copyDir(uri,source,manager); //复制文件夹
+//        moveDir(uri,source,manager); //移动文件夹
     }
 
     /***
@@ -35,8 +43,47 @@ public class AllMethodsDemo {
         TotalFile totalFile = FileList.getList(dirUri, manager);
         List list = totalFile.getFileList();
         for (int i = 0; i < list.size(); i++) {
+            Response response = manager.deleteFile(list.get(i).toString(), null);
             System.out.println(list.get(i));
-            manager.deleteFile(list.get(i).toString(), null);
+            System.out.println(Objects.requireNonNull(response.body()).string());
+        }
+    }
+
+    /***
+     * 文件复制
+     * @param uri  目标路径
+     * @param source 源文件路径
+     * @param manager RestManager
+     * @throws Exception
+     */
+    private static void copyDir(String uri, String source, RestManager manager) throws Exception {
+        TotalFile totalFile = FileList.getList(source, manager);
+        List list = totalFile.getFileList();
+        String bucketName = manager.bucketName;
+        for (int i = 0; i < list.size(); i++) {
+            String sourceFileUri = "/" + bucketName + list.get(i);
+            String toFileUri = "/" + bucketName + uri + list.get(i);
+            Integer integer = MFCopy.copyFile(toFileUri, sourceFileUri, manager.userName, manager.password);
+            System.out.println("Source：" + sourceFileUri + "  CopyTo：" + toFileUri + "   Code：" + integer);
+        }
+    }
+
+    /***
+     * 文件移动
+     * @param uri  目标路径
+     * @param source 源文件路径
+     * @param manager RestManager
+     * @throws Exception
+     */
+    private static void moveDir(String uri, String source, RestManager manager) throws Exception {
+        TotalFile totalFile = FileList.getList(source, manager);
+        List list = totalFile.getFileList();
+        String bucketName = manager.bucketName;
+        for (int i = 0; i < list.size(); i++) {
+            String sourceFileUri = "/" + bucketName + list.get(i);
+            String toFileUri = "/" + bucketName + uri + list.get(i);
+            Integer integer = MFCopy.moveFile(toFileUri, sourceFileUri, manager.userName, manager.password);
+            System.out.println("Source：" + sourceFileUri + "  MoveTo：" + toFileUri + "   Code：" + integer);
         }
     }
 }
