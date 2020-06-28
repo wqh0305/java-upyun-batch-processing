@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="daaa7dbb-9f78-4c44-abd9-36765a5fad9e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-upyun-batch-processing.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/upyun/AllMethodsDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/upyun/AllMethodsDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/upyun/pojo/TotalFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/upyun/pojo/TotalFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/upyun/utils/FileList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/upyun/utils/FileList.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +49,26 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="AllMethodsDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.upyun.AllMethodsDemo" />
+      <module name="java-upyun-batch-processing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.upyun.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AllMethodsDemo" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -65,7 +87,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

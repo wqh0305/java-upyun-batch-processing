@@ -6,6 +6,7 @@ import com.upyun.utils.MFCopy;
 import okhttp3.Response;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.*;
 
 public class AllMethodsDemo {
@@ -27,12 +28,10 @@ public class AllMethodsDemo {
      */
     private static void toGetFilesList(String dirUri, RestManager manager) throws IOException, UpException {
         TotalFile totalFile = FileList.getList(dirUri, manager);
-        List list = totalFile.getFileList();
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
-        }
         System.out.println("文件数量：" + totalFile.getFileNum());
         System.out.println("目录数量：" + totalFile.getDirNum());
+        BigDecimal bigDecimal = new BigDecimal(totalFile.getFileSize());
+        System.out.println("总大小(单位 byte)：" + bigDecimal);
     }
 
     /***

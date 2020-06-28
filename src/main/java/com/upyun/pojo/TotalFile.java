@@ -6,6 +6,15 @@ public class TotalFile {
     private List<String> fileList;
     private int fileNum;
     private int dirNum;
+    private double fileSize;
+
+    public double getFileSize() {
+        return fileSize;
+    }
+
+    public void setFileSize(double fileSize) {
+        this.fileSize = fileSize;
+    }
 
     public TotalFile() {
     }
