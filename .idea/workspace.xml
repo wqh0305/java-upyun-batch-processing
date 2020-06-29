@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="daaa7dbb-9f78-4c44-abd9-36765a5fad9e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/upyun/AllMethodsDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/upyun/AllMethodsDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/upyun/pojo/TotalFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/upyun/pojo/TotalFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/upyun/utils/FileList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/upyun/utils/FileList.java" afterDir="false" />
-    </list>
+    <list default="true" id="daaa7dbb-9f78-4c44-abd9-36765a5fad9e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
