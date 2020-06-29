@@ -46,7 +46,6 @@ public class FileList {
                     } else {
                         fileNum++;
                         fileSize += (Double.parseDouble(Objects.requireNonNull(manager.getFileInfo(filePath).headers().get("x-upyun-file-size"))));
-                        System.out.println(filePath);
                         fileList.add(filePath);
                     }
                 }
